@@ -40,6 +40,6 @@ func main() {
 		})
 	log.Printf("Message sent on queue %s : %s", queueName, messageBody)
 	if err != nil {
-		log.Printf("Message not sent successfully on queue %s", queueName, messageBody)
+		log.Printf("Message not sent successfully on queue %s : %s", queueName, messageBody)
 	}
 }
