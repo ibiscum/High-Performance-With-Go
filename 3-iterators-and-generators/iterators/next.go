@@ -1,6 +1,6 @@
 package iterators
 
-var sumNext int
+// var sumNext int
 
 type CounterStruct struct {
 	err error

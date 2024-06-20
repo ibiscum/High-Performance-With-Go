@@ -15,5 +15,5 @@ func main() {
 func panicRoutine(c chan bool) {
 	time.Sleep(100 * time.Millisecond)
 	panic("Goroutine Panic")
-	c <- true
+	//c <- true
 }

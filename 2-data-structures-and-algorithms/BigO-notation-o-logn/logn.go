@@ -3,7 +3,6 @@ package logn
 import (
 	"math/rand"
 	"sort"
-	"time"
 )
 
 var testSet = generateIntSlice(100000)
@@ -21,7 +20,7 @@ func generateIntSlice(n int) []int {
 }
 
 func randNumber(testSet []int) int {
-	rand.Seed(time.Now().Unix())
+	// rand.Seed(time.Now().Unix())
 	randSeed := rand.Int() % len(testSet)
 	randSearchNum := testSet[randSeed]
 	return randSearchNum

@@ -2,7 +2,6 @@ package comparison
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 )
 
@@ -19,5 +18,5 @@ func CarJSON() {
 	if err != nil {
 		log.Println(err)
 	}
-	fmt.Sprintf(string(carDataJson))
+	log.Print(string(carDataJson))
 }

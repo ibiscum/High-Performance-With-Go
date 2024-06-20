@@ -1,7 +1,8 @@
 package logn
 
 import "testing"
-var result int
+
+// var result int
 func benchmarkBinarySearchTimings(i int, b *testing.B) {
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {
