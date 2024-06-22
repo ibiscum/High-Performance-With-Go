@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
-	"time"
 
 	"github.com/muesli/clusters"
 	"github.com/muesli/kmeans"
@@ -28,16 +27,34 @@ func printCluster(clusters clusters.Clusters) {
 	}
 }
 
+type SimplePlotter struct {
+	cc        clusters.Clusters
+	iteration int
+}
+
+func (sp SimplePlotter) Plot(cc clusters.Clusters, iteration int) error {
+	for i, _ := range cc {
+		println(i)
+
+		for i := range iteration {
+			println(i)
+		}
+
+	}
+	return nil
+}
+
 func main() {
+	var sp SimplePlotter
 
 	var clusterSize = 3
 	var datasetSize = 30
 	var thresholdSize = 0.01
-	rand.Seed(time.Now().UnixNano())
+	// rand.Seed(time.Now().UnixNano())
 	dataset := createDataset(datasetSize)
 	fmt.Println("Dataset: ", dataset)
 
-	km, err := kmeans.NewWithOptions(thresholdSize, kmeans.SimplePlotter{})
+	km, err := kmeans.NewWithOptions(thresholdSize, sp)
 	if err != nil {
 		log.Printf("Your K-Means configuration struct was not initialized properly")
 	}

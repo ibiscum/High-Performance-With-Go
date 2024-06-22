@@ -5,9 +5,9 @@ import "fmt"
 func main() {
 
 	var tmp = []int{1, 2, 3}
-	b := tmp[1:len(tmp)]
+	b := tmp[1:]
 	fmt.Println(b)
-	for i, _ := range tmp {
+	for i := range tmp {
 		fmt.Println(tmp[i])
 	}
 

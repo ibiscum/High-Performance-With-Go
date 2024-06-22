@@ -20,12 +20,17 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	connection.SetWriteDeadline(time.Now().Add(10 * time.Second))
+	err = connection.SetWriteDeadline(time.Now().Add(10 * time.Second))
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	for i := 0; i < 10; i++ {
-		connection.WriteMessages(
-			kafka.Message{Value: []byte(fmt.Sprintf("Message : %v", i))},
-		)
+		_, err := connection.WriteMessages(kafka.Message{Value: []byte(fmt.Sprintf("Message : %v", i))})
+		if err != nil {
+			log.Fatal(err)
+		}
+
 	}
 
 	connection.Close()

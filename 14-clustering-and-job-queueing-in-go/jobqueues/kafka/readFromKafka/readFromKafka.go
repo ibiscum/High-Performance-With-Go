@@ -22,7 +22,10 @@ func main() {
 		log.Fatal("Could not create a Kafka Connection")
 	}
 
-	connection.SetReadDeadline(time.Now().Add(10 * time.Second))
+	err = connection.SetReadDeadline(time.Now().Add(10 * time.Second))
+	if err != nil {
+		log.Fatal(err)
+	}
 	readBatch := connection.ReadBatch(500, 500000)
 
 	byteString := make([]byte, 500)
