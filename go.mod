@@ -20,7 +20,7 @@ require (
 	github.com/gonum/blas v0.0.0-20181208220705-f22b278b28ac // indirect
 	github.com/gonum/lapack v0.0.0-20181123203213-e4cdc5a0bff9 // indirect
 	github.com/gonum/matrix v0.0.0-20181209220409-c518dec07be9 // indirect
-	github.com/google/go-cmp v0.4.0 // indirect
+	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/guptarohit/asciigraph v0.5.1 // indirect
 	github.com/james-bowman/sparse v0.0.0-20210729090128-1e6c7dd483e9
 	github.com/jupp0r/go-priority-queue v0.0.0-20160601094913-ab1073853bde
@@ -31,8 +31,8 @@ require (
 	github.com/rocketlaunchr/dataframe-go v0.0.0-20201007021539-67b046771f0b // indirect
 	github.com/segmentio/kafka-go v0.4.47
 	github.com/soniakeys/multiset v1.0.0
-	golang.org/x/exp v0.0.0-20210220032938-85be41e4509f // indirect
-	gonum.org/v1/gonum v0.8.2
+	golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa // indirect
+	gonum.org/v1/gonum v0.15.0
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
 	gopkg.in/karalabe/cookiejar.v1 v1.0.0-20141109175019-e1490cae028c
 )
