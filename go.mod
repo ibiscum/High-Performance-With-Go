@@ -32,7 +32,7 @@ require (
 	github.com/segmentio/kafka-go v0.4.47
 	github.com/soniakeys/multiset v1.0.0
 	golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa // indirect
-	gonum.org/v1/gonum v0.15.0
+	gonum.org/v1/gonum v0.15.1
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
 	gopkg.in/karalabe/cookiejar.v1 v1.0.0-20141109175019-e1490cae028c
 )
