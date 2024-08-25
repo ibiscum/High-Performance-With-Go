@@ -7,7 +7,7 @@ require (
 	github.com/muesli/clusters v0.0.0-20180605185049-a07a36e67d36
 	github.com/sjwhitworth/golearn v0.0.0-20221228163002-74ae077eafb2
 	github.com/streadway/amqp v1.1.0
-	golang.org/x/sync v0.7.0
+	golang.org/x/sync v0.8.0
 )
 
 require (
