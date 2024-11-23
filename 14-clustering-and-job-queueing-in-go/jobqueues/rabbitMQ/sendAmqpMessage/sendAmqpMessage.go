@@ -17,19 +17,19 @@ func main() {
 	connectionString := protocol + username + ":" + password + "@" + host + port
 	connection, err := amqp.Dial(connectionString)
 	if err != nil {
-		log.Printf("Could not connect to Local RabbitMQ instance on " + host)
+		log.Print("Could not connect to Local RabbitMQ instance on " + host)
 	}
 	defer connection.Close()
 
 	ch, err := connection.Channel()
 	if err != nil {
-		log.Printf("Could not connect to channel")
+		log.Print("Could not connect to channel")
 	}
 	defer ch.Close()
 
 	queue, err := ch.QueueDeclare(queueName, false, false, false, false, nil)
 	if err != nil {
-		log.Printf("Could not declare queue : " + queueName)
+		log.Print("Could not declare queue: " + queueName)
 	}
 
 	messageBody := "Hello Gophers!"
@@ -38,8 +38,8 @@ func main() {
 			ContentType: "text/plain",
 			Body:        []byte(messageBody),
 		})
-	log.Printf("Message sent on queue %s : %s", queueName, messageBody)
+	log.Printf("Message sent on queue %s: %s", queueName, messageBody)
 	if err != nil {
-		log.Printf("Message not sent successfully on queue %s : %s", queueName, messageBody)
+		log.Printf("Message not sent successfully on queue %s: %s", queueName, messageBody)
 	}
 }

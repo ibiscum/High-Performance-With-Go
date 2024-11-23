@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/sjwhitworth/golearn/base"
 	"github.com/sjwhitworth/golearn/evaluation"
@@ -17,7 +18,10 @@ func main() {
 	cls := knn.NewKnnClassifier("manhattan", "linear", 2)
 
 	trainData, testData := base.InstancesTrainTestSplit(rawData, 0.50)
-	cls.Fit(trainData)
+	err = cls.Fit(trainData)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	predictions, err := cls.Predict(testData)
 	if err != nil {

@@ -29,7 +29,10 @@ func makeRequest(ctx context.Context, url string) string {
 	log.Printf("Retrieving URL")
 	_, span := trace.StartSpan(ctx, "httpRequest")
 	defer span.End()
-	res, _ := http.Get(url)
+	res, err := http.Get(url)
+	if err != nil {
+		log.Fatal(err)
+	}
 	defer res.Body.Close()
 	time.Sleep(100 * time.Millisecond)
 	log.Printf("URL Response : %s", res.Status)

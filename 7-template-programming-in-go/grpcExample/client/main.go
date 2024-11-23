@@ -7,6 +7,7 @@ import (
 
 	pb "github.com/ibiscum/High-Performance-With-Go/7-template-programming-in-go/grpcExample/userinfo"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 const (
@@ -16,7 +17,7 @@ const (
 )
 
 func main() {
-	conn, err := grpc.Dial(defaultGrpcAddress, grpc.WithInsecure())
+	conn, err := grpc.Dial(defaultGrpcAddress, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
 	}

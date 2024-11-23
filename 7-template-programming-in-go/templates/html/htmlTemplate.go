@@ -28,8 +28,11 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 	requestedURL := string(r.URL.Path)
 	userfields := UserFields{"Bob", requestedURL, "bob@example.com"}
 	t := template.Must(template.New("HTML Body").Parse(userResponse))
-	t.Execute(w, userfields)
-	log.Printf("User " + userfields.Name + " Visited : " + requestedURL)
+	err := t.Execute(w, userfields)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Print("User " + userfields.Name + " Visited : " + requestedURL)
 }
 
 func main() {
@@ -37,5 +40,8 @@ func main() {
 		Addr: "127.0.0.1:8080",
 	}
 	http.HandleFunc("/", rootHandler)
-	s.ListenAndServe()
+	err := s.ListenAndServe()
+	if err != nil {
+		log.Fatal(err)
+	}
 }

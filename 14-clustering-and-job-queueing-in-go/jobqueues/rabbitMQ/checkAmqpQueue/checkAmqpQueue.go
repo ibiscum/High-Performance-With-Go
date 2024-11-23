@@ -17,7 +17,7 @@ func main() {
 	connectionString := protocol + username + ":" + password + "@" + host + port
 	connection, err := amqp.Dial(connectionString)
 	if err != nil {
-		log.Printf("Could not connect to Local RabbitMQ instance on " + host)
+		log.Print("Could not connect to Local RabbitMQ instance on " + host)
 	}
 	defer connection.Close()
 
@@ -29,7 +29,7 @@ func main() {
 
 	queue, err := ch.QueueDeclare(queueName, false, false, false, false, nil)
 	if err != nil {
-		log.Printf("Could not declare queue : " + queueName)
+		log.Print("Could not declare queue: " + queueName)
 	}
 
 	messages, err := ch.Consume(queue.Name, "", true, false, false, false, nil)

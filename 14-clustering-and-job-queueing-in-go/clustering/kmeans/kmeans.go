@@ -33,7 +33,7 @@ type SimplePlotter struct {
 }
 
 func (sp SimplePlotter) Plot(cc clusters.Clusters, iteration int) error {
-	for i, _ := range cc {
+	for i := range cc {
 		println(i)
 
 		for i := range iteration {

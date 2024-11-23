@@ -1,12 +1,16 @@
 package iterators
 
+import "log"
+
 var sumCallback int
 
 func CallbackLoop(top int) {
 	err := callbackLoopIterator(top, func(n int) error {
 		sumCallback += n
+		log.Print(sumCallback)
 		return nil
 	})
+
 	if err != nil {
 		panic(err)
 	}

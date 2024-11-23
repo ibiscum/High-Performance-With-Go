@@ -55,10 +55,10 @@ func main() {
 
 	http.Handle("/", h)
 
-	log.Printf("serving at : %s", server)
+	log.Printf("serving at: %s", server)
 	err := http.ListenAndServe(server, nil)
 	if err != nil {
-		log.Fatal("Couldn't start HTTP server: %s", err)
+		log.Fatalf("couldn't start HTTP server: %s", err)
 	}
 
 }
