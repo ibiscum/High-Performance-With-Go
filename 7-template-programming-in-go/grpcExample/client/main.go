@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	pb "github.com/ibiscum/High-Performance-With-Go/7-template-programming-in-go/grpcExample/userinfo/userinfo"
+	pb "github.com/ibiscum/High-Performance-With-Go/7-template-programming-in-go/grpcExample/userinfo"
 	"google.golang.org/grpc"
 )
 
