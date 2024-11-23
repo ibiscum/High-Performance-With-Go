@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"runtime/debug"
 	"time"
@@ -10,7 +11,10 @@ import (
 
 func main() {
 	Handler := func(w http.ResponseWriter, req *http.Request) {
-		io.WriteString(w, "Memory Management Test")
+		_, err := io.WriteString(w, "Memory Management Test")
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	go func() {

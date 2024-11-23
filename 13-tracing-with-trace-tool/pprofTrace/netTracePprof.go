@@ -2,6 +2,7 @@ package main
 
 import (
 	"io"
+	"log"
 	"net/http"
 	_ "net/http/pprof"
 	"time"
@@ -10,9 +11,15 @@ import (
 func main() {
 	Handler := func(w http.ResponseWriter, req *http.Request) {
 		time.Sleep(5 * time.Second)
-		io.WriteString(w, "Network Trace Profile Test")
+		_, err := io.WriteString(w, "Network Trace Profile Test")
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	http.HandleFunc("/", Handler)
-	http.ListenAndServe(":1234", nil)
+	err := http.ListenAndServe(":1234", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
