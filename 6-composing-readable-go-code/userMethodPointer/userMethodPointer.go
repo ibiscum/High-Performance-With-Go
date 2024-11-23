@@ -11,6 +11,7 @@ type User struct {
 
 func (u User) updateEmail(newEmail string) {
 	u.email = newEmail
+	fmt.Println(u.email)
 }
 
 func (u *User) updatePhone(newPhone string) {

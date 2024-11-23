@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github/ibiscum/High-Performance-With-Go/7-template-programming-in-go/clitooling/cmd"
 	"os"
+
+	"github.com/ibiscum/High-Performance-With-Go/7-template-programming-in-go/clitooling/cmd"
 )
 
 func main() {

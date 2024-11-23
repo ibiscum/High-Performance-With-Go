@@ -1,4 +1,4 @@
-module github/ibiscum/High-Performance-With-Go
+module github.com/ibiscum/High-Performance-With-Go
 
 go 1.23.1
 

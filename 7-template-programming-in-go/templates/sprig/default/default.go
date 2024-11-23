@@ -24,7 +24,7 @@ func main() {
 
 	fmt.Print("\nfull template: ")
 	fullErr := t.Execute(os.Stdout, fullTemplate)
-	if emptyErr != nil {
+	if fullErr != nil {
 		fmt.Printf("Couldn't create template: %s", fullErr)
 		return
 	}

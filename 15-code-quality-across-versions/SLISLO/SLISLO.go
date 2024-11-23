@@ -43,7 +43,10 @@ func main() {
 		} else if sleepTime%5 == 0 {
 			http.Error(w, "Server Error", http.StatusInternalServerError)
 		} else {
-			w.Write([]byte("Golden Signal Handler"))
+			_, err := w.Write([]byte("Golden Signal Handler"))
+			if err != nil {
+				log.Fatal(err)
+			}
 		}
 		log.Println("Request Completed")
 	})
