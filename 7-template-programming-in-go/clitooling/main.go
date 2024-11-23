@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/HighPerformanceWithGo/7-metaprogramming-in-go/clitooling/cmd"
+	"github.com/ibiscum/High-Performance-With-Go/7-template-programming-in-go/clitooling/cmd"
 )
 
 func main() {

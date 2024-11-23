@@ -10,10 +10,7 @@ import (
 )
 
 func main() {
-	p, err := plot.New()
-	if err != nil {
-		panic(err)
-	}
+	p := plot.New()
 	p.Title.Text = "Big O Notation Plot"
 	p.X.Label.Text = "Data Input"
 	p.Y.Label.Text = "Execution Time"
@@ -55,7 +52,7 @@ func main() {
 	p.Legend.Add("Quadratic: O(n^2)", quad)
 	p.Legend.Add("Exponential: O(2^n)", exp)
 	p.Legend.YOffs = 100
-	p.Legend.Color = color.Black
+	p.Legend.TextStyle.Color = color.Black
 	p.Legend.ThumbnailWidth = 0.5 * vg.Inch
 
 	// Set the axis ranges.  Unlike other data sets,
