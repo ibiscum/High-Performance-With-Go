@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"log"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	server := gin.Default()
@@ -9,5 +13,8 @@ func main() {
 			"response": "bar",
 		})
 	})
-	server.Run()
+	err := server.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
 }

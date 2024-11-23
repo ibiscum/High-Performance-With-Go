@@ -2,13 +2,14 @@ package cmd
 
 import (
 	"fmt"
+	"log"
 	"time"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
 
-var verbose bool
+// var verbose bool
 var DateCommand = &cobra.Command{
 	Use:     "date",
 	Aliases: []string{"time"},
@@ -40,7 +41,12 @@ func init() {
 	DateCommand.PersistentFlags().BoolP("verbose", "v", false, "Date Command Verbose")
 	DateCommand.PersistentFlags().StringP("author", "a", "bob", "Date Command Author")
 
-	viper.BindPFlag("author", DateCommand.PersistentFlags().Lookup("author"))
-	viper.BindPFlag("verbose", DateCommand.PersistentFlags().Lookup("verbose"))
-
+	err := viper.BindPFlag("author", DateCommand.PersistentFlags().Lookup("author"))
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = viper.BindPFlag("verbose", DateCommand.PersistentFlags().Lookup("verbose"))
+	if err != nil {
+		log.Fatal(err)
+	}
 }
