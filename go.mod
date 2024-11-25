@@ -4,15 +4,15 @@ go 1.23.1
 
 require (
 	github.com/golang-collections/collections v0.0.0-20130729185459-604e922904d3
-	github.com/golang/protobuf v1.5.3
+	github.com/golang/protobuf v1.5.4
 	github.com/muesli/clusters v0.0.0-20200529215643-2700303c1762
-	github.com/openzipkin/zipkin-go v0.2.2
+	github.com/openzipkin/zipkin-go v0.4.3
 	github.com/sjwhitworth/golearn v0.0.0-20221228163002-74ae077eafb2
 	github.com/streadway/amqp v1.1.0
 	go.opencensus.io v0.24.0
 	golang.org/x/sync v0.9.0
 	gonum.org/v1/plot v0.14.0
-	google.golang.org/grpc v1.62.1
+	google.golang.org/grpc v1.63.2
 )
 
 require (
@@ -100,9 +100,9 @@ require (
 	golang.org/x/text v0.16.0 // indirect
 	golang.org/x/time v0.5.0 // indirect
 	google.golang.org/api v0.171.0 // indirect
-	google.golang.org/genproto v0.0.0-20240213162025-012b6fc9bca9 // indirect
+	google.golang.org/genproto v0.0.0-20240227224415-6ceb2ff114de // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20240311132316-a219d84964c2 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20240314234333-6e1732d8331c // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20240415180920-8c6c420018be // indirect
 	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
