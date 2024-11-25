@@ -4,7 +4,7 @@ go 1.23.1
 
 require (
 	github.com/golang-collections/collections v0.0.0-20130729185459-604e922904d3
-	github.com/golang/protobuf v1.5.3
+	github.com/golang/protobuf v1.5.4
 	github.com/muesli/clusters v0.0.0-20200529215643-2700303c1762
 	github.com/openzipkin/zipkin-go v0.2.2
 	github.com/sjwhitworth/golearn v0.0.0-20221228163002-74ae077eafb2
