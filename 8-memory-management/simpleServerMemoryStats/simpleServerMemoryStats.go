@@ -34,5 +34,8 @@ func main() {
 	}()
 
 	http.HandleFunc("/", Handler)
-	http.ListenAndServe(":1234", nil)
+	err := http.ListenAndServe(":1234", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

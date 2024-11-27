@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"runtime"
 )
@@ -48,5 +49,8 @@ func memStats(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", memStats)
-	http.ListenAndServe(":1234", nil)
+	err := http.ListenAndServe(":1234", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

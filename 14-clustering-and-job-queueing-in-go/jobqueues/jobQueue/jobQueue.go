@@ -34,5 +34,8 @@ func main() {
 		jobQueue <- submittedJob
 	})
 
-	http.ListenAndServe(":"+port, nil)
+	err := http.ListenAndServe(":"+port, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
