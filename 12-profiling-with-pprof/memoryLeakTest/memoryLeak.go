@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	_ "net/http/pprof"
@@ -11,7 +12,8 @@ import (
 
 func main() {
 	http.HandleFunc("/leak", leakyAbstraction)
-	http.ListenAndServe("localhost:6060", nil)
+	err := http.ListenAndServe("localhost:6060", nil)
+	log.Fatal(err)
 }
 
 func leakyAbstraction(w http.ResponseWriter, r *http.Request) {

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	_ "net/http/pprof"
 	"strconv"
@@ -20,8 +21,12 @@ func main() {
 		fmt.Fprintf(w, "Slept for %v Milliseconds", sleepDuration)
 	}
 	http.HandleFunc("/", Handler)
-	http.ListenAndServe(":1234", nil)
+	err := http.ListenAndServe(":1234", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
+
 func sleep(sleepTime int) {
 	time.Sleep(time.Duration(sleepTime) * time.Millisecond)
 	fmt.Println("Slept for ", sleepTime, " Milliseconds")

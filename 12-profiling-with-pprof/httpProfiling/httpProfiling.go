@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	_ "net/http/pprof"
 	"time"
@@ -14,7 +15,10 @@ func main() {
 		fmt.Fprintf(w, "Sleep Profiling Test")
 	}
 	http.HandleFunc("/", Handler)
-	http.ListenAndServe(":1234", nil)
+	err := http.ListenAndServe(":1234", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 func sleep(sleepTime int) {

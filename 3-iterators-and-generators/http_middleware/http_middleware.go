@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -9,7 +10,7 @@ import (
 func adminCheck(h http.Handler) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.Header.Get("user") != "admin" {
-			http.Error(w, "Not Authorized", 401)
+			http.Error(w, "Not Authorized", http.StatusUnauthorized)
 			return
 		}
 		fmt.Fprintln(w, "Admin Portal")
@@ -45,5 +46,8 @@ func main() {
 	http.Handle("/onlyHeader", addHeader(handler))
 	http.Handle("/onlyStatus", newStatusCode(handler))
 	http.Handle("/admin", adminCheck(handler))
-	http.ListenAndServe(":1234", nil)
+	err := http.ListenAndServe(":1234", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

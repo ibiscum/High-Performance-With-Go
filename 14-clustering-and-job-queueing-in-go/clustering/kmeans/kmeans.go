@@ -28,8 +28,8 @@ func printCluster(clusters clusters.Clusters) {
 }
 
 type SimplePlotter struct {
-	cc        clusters.Clusters
-	iteration int
+	// cc        clusters.Clusters
+	// iteration int
 }
 
 func (sp SimplePlotter) Plot(cc clusters.Clusters, iteration int) error {
