@@ -29,6 +29,7 @@ func main() {
 		wg.Add(1)
 		go retrieve(urls[i], &wg)
 	}
+
 	// Wait for the collection of Goroutines to finish
 	wg.Wait()
 }

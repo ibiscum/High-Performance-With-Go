@@ -3,14 +3,19 @@ package main
 import "fmt"
 
 func helloGo() {
-	fmt.Println("Hello Go from a Function")
-
+	fmt.Println("Hello Go from function helloGo")
 }
 
 func main() {
-
 	helloGo()
-	func() { fmt.Println("Hello Go from an Anonymous Function") }()
-	var hello func() = func() { fmt.Println("Hello Go from an Anonymous Function Variable") }
+
+	func() {
+		fmt.Println("Hello Go from an anonymous function")
+	}()
+
+	var hello func() = func() {
+		fmt.Println("Hello Go from an anonymous function variable")
+	}
+
 	hello()
 }
