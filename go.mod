@@ -59,7 +59,7 @@ require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/klauspost/compress v1.17.11 // indirect
+	github.com/klauspost/compress v1.18.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.9 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/magiconair/properties v1.8.9 // indirect
@@ -74,7 +74,7 @@ require (
 	github.com/pierrec/lz4/v4 v4.1.22 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/prometheus/client_model v0.6.1 // indirect
-	github.com/prometheus/common v0.61.0 // indirect
+	github.com/prometheus/common v0.62.0 // indirect
 	github.com/prometheus/procfs v0.15.1 // indirect
 	github.com/prometheus/prometheus v0.300.1 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
@@ -99,14 +99,14 @@ require (
 	golang.org/x/image v0.23.0 // indirect
 	golang.org/x/net v0.33.0 // indirect
 	golang.org/x/oauth2 v0.24.0 // indirect
-	golang.org/x/sys v0.28.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
 	golang.org/x/time v0.8.0 // indirect
 	google.golang.org/api v0.214.0 // indirect
 	google.golang.org/genproto v0.0.0-20241219192143-6b3ec007d9bb // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20241219192143-6b3ec007d9bb // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20241219192143-6b3ec007d9bb // indirect
-	google.golang.org/protobuf v1.36.0 // indirect
+	google.golang.org/protobuf v1.36.5 // indirect
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
@@ -121,7 +121,7 @@ require (
 	github.com/gonum/blas v0.0.0-20181208220705-f22b278b28ac // indirect
 	github.com/gonum/lapack v0.0.0-20181123203213-e4cdc5a0bff9 // indirect
 	github.com/gonum/matrix v0.0.0-20181209220409-c518dec07be9 // indirect
-	github.com/google/go-cmp v0.6.0 // indirect
+	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/guptarohit/asciigraph v0.7.3 // indirect
 	github.com/james-bowman/sparse v0.0.0-20210729090128-1e6c7dd483e9
 	github.com/jupp0r/go-priority-queue v0.0.0-20160601094913-ab1073853bde
@@ -129,7 +129,7 @@ require (
 	github.com/mattn/go-runewidth v0.0.16 // indirect
 	github.com/muesli/kmeans v0.3.1
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
-	github.com/prometheus/client_golang v1.20.5
+	github.com/prometheus/client_golang v1.22.0
 	github.com/rocketlaunchr/dataframe-go v0.0.0-20211025052708-a1030444159b // indirect
 	github.com/segmentio/kafka-go v0.4.47
 	github.com/soniakeys/multiset v1.0.0
