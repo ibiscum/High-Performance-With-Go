@@ -133,7 +133,7 @@ require (
 	github.com/soniakeys/multiset v1.0.0
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
-	go.uber.org/zap v1.27.0
+	go.uber.org/zap v1.28.0
 	golang.org/x/exp v0.0.0-20241217172543-b2144cdd0a67 // indirect
 	gonum.org/v1/gonum v0.17.0
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
