@@ -1,6 +1,6 @@
 module github.com/ibiscum/High-Performance-With-Go
 
-go 1.24.0
+go 1.25.0
 
 require (
 	github.com/golang-collections/collections v0.0.0-20130729185459-604e922904d3
@@ -10,7 +10,7 @@ require (
 	github.com/sjwhitworth/golearn v0.0.0-20221228163002-74ae077eafb2
 	github.com/streadway/amqp v1.1.0
 	go.opencensus.io v0.24.0
-	golang.org/x/sync v0.16.0
+	golang.org/x/sync v0.20.0
 	gonum.org/v1/plot v0.15.2
 	google.golang.org/grpc v1.70.0
 )
