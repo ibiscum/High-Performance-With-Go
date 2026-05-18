@@ -129,7 +129,7 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/prometheus/client_golang v1.23.2
 	github.com/rocketlaunchr/dataframe-go v0.0.0-20211025052708-a1030444159b // indirect
-	github.com/segmentio/kafka-go v0.4.47
+	github.com/segmentio/kafka-go v0.4.51
 	github.com/soniakeys/multiset v1.0.0
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
