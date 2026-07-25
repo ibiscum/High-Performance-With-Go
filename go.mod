@@ -12,7 +12,7 @@ require (
 	go.opencensus.io v0.24.0
 	golang.org/x/sync v0.21.0
 	gonum.org/v1/plot v0.17.0
-	google.golang.org/grpc v1.82.0
+	google.golang.org/grpc v1.82.1
 )
 
 require (
